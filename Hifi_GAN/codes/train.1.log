@@ -1,0 +1,343 @@
+nohup: ignoring input
+Batch size per GPU :  12
+Generator(
+  (conv_pre): Conv1d(80, 512, kernel_size=(7,), stride=(1,), padding=(3,))
+  (ups): ModuleList(
+    (0): ConvTranspose1d(512, 256, kernel_size=(16,), stride=(8,), padding=(4,))
+    (1): ConvTranspose1d(256, 128, kernel_size=(16,), stride=(8,), padding=(4,))
+    (2): ConvTranspose1d(128, 64, kernel_size=(4,), stride=(2,), padding=(1,))
+    (3): ConvTranspose1d(64, 32, kernel_size=(4,), stride=(2,), padding=(1,))
+  )
+  (resblocks): ModuleList(
+    (0): ResBlock1(
+      (convs1): ModuleList(
+        (0): Conv1d(256, 256, kernel_size=(3,), stride=(1,), padding=(1,))
+        (1): Conv1d(256, 256, kernel_size=(3,), stride=(1,), padding=(3,), dilation=(3,))
+        (2): Conv1d(256, 256, kernel_size=(3,), stride=(1,), padding=(5,), dilation=(5,))
+      )
+      (convs2): ModuleList(
+        (0-2): 3 x Conv1d(256, 256, kernel_size=(3,), stride=(1,), padding=(1,))
+      )
+    )
+    (1): ResBlock1(
+      (convs1): ModuleList(
+        (0): Conv1d(256, 256, kernel_size=(7,), stride=(1,), padding=(3,))
+        (1): Conv1d(256, 256, kernel_size=(7,), stride=(1,), padding=(9,), dilation=(3,))
+        (2): Conv1d(256, 256, kernel_size=(7,), stride=(1,), padding=(15,), dilation=(5,))
+      )
+      (convs2): ModuleList(
+        (0-2): 3 x Conv1d(256, 256, kernel_size=(7,), stride=(1,), padding=(3,))
+      )
+    )
+    (2): ResBlock1(
+      (convs1): ModuleList(
+        (0): Conv1d(256, 256, kernel_size=(11,), stride=(1,), padding=(5,))
+        (1): Conv1d(256, 256, kernel_size=(11,), stride=(1,), padding=(15,), dilation=(3,))
+        (2): Conv1d(256, 256, kernel_size=(11,), stride=(1,), padding=(25,), dilation=(5,))
+      )
+      (convs2): ModuleList(
+        (0-2): 3 x Conv1d(256, 256, kernel_size=(11,), stride=(1,), padding=(5,))
+      )
+    )
+    (3): ResBlock1(
+      (convs1): ModuleList(
+        (0): Conv1d(128, 128, kernel_size=(3,), stride=(1,), padding=(1,))
+        (1): Conv1d(128, 128, kernel_size=(3,), stride=(1,), padding=(3,), dilation=(3,))
+        (2): Conv1d(128, 128, kernel_size=(3,), stride=(1,), padding=(5,), dilation=(5,))
+      )
+      (convs2): ModuleList(
+        (0-2): 3 x Conv1d(128, 128, kernel_size=(3,), stride=(1,), padding=(1,))
+      )
+    )
+    (4): ResBlock1(
+      (convs1): ModuleList(
+        (0): Conv1d(128, 128, kernel_size=(7,), stride=(1,), padding=(3,))
+        (1): Conv1d(128, 128, kernel_size=(7,), stride=(1,), padding=(9,), dilation=(3,))
+        (2): Conv1d(128, 128, kernel_size=(7,), stride=(1,), padding=(15,), dilation=(5,))
+      )
+      (convs2): ModuleList(
+        (0-2): 3 x Conv1d(128, 128, kernel_size=(7,), stride=(1,), padding=(3,))
+      )
+    )
+    (5): ResBlock1(
+      (convs1): ModuleList(
+        (0): Conv1d(128, 128, kernel_size=(11,), stride=(1,), padding=(5,))
+        (1): Conv1d(128, 128, kernel_size=(11,), stride=(1,), padding=(15,), dilation=(3,))
+        (2): Conv1d(128, 128, kernel_size=(11,), stride=(1,), padding=(25,), dilation=(5,))
+      )
+      (convs2): ModuleList(
+        (0-2): 3 x Conv1d(128, 128, kernel_size=(11,), stride=(1,), padding=(5,))
+      )
+    )
+    (6): ResBlock1(
+      (convs1): ModuleList(
+        (0): Conv1d(64, 64, kernel_size=(3,), stride=(1,), padding=(1,))
+        (1): Conv1d(64, 64, kernel_size=(3,), stride=(1,), padding=(3,), dilation=(3,))
+        (2): Conv1d(64, 64, kernel_size=(3,), stride=(1,), padding=(5,), dilation=(5,))
+      )
+      (convs2): ModuleList(
+        (0-2): 3 x Conv1d(64, 64, kernel_size=(3,), stride=(1,), padding=(1,))
+      )
+    )
+    (7): ResBlock1(
+      (convs1): ModuleList(
+        (0): Conv1d(64, 64, kernel_size=(7,), stride=(1,), padding=(3,))
+        (1): Conv1d(64, 64, kernel_size=(7,), stride=(1,), padding=(9,), dilation=(3,))
+        (2): Conv1d(64, 64, kernel_size=(7,), stride=(1,), padding=(15,), dilation=(5,))
+      )
+      (convs2): ModuleList(
+        (0-2): 3 x Conv1d(64, 64, kernel_size=(7,), stride=(1,), padding=(3,))
+      )
+    )
+    (8): ResBlock1(
+      (convs1): ModuleList(
+        (0): Conv1d(64, 64, kernel_size=(11,), stride=(1,), padding=(5,))
+        (1): Conv1d(64, 64, kernel_size=(11,), stride=(1,), padding=(15,), dilation=(3,))
+        (2): Conv1d(64, 64, kernel_size=(11,), stride=(1,), padding=(25,), dilation=(5,))
+      )
+      (convs2): ModuleList(
+        (0-2): 3 x Conv1d(64, 64, kernel_size=(11,), stride=(1,), padding=(5,))
+      )
+    )
+    (9): ResBlock1(
+      (convs1): ModuleList(
+        (0): Conv1d(32, 32, kernel_size=(3,), stride=(1,), padding=(1,))
+        (1): Conv1d(32, 32, kernel_size=(3,), stride=(1,), padding=(3,), dilation=(3,))
+        (2): Conv1d(32, 32, kernel_size=(3,), stride=(1,), padding=(5,), dilation=(5,))
+      )
+      (convs2): ModuleList(
+        (0-2): 3 x Conv1d(32, 32, kernel_size=(3,), stride=(1,), padding=(1,))
+      )
+    )
+    (10): ResBlock1(
+      (convs1): ModuleList(
+        (0): Conv1d(32, 32, kernel_size=(7,), stride=(1,), padding=(3,))
+        (1): Conv1d(32, 32, kernel_size=(7,), stride=(1,), padding=(9,), dilation=(3,))
+        (2): Conv1d(32, 32, kernel_size=(7,), stride=(1,), padding=(15,), dilation=(5,))
+      )
+      (convs2): ModuleList(
+        (0-2): 3 x Conv1d(32, 32, kernel_size=(7,), stride=(1,), padding=(3,))
+      )
+    )
+    (11): ResBlock1(
+      (convs1): ModuleList(
+        (0): Conv1d(32, 32, kernel_size=(11,), stride=(1,), padding=(5,))
+        (1): Conv1d(32, 32, kernel_size=(11,), stride=(1,), padding=(15,), dilation=(3,))
+        (2): Conv1d(32, 32, kernel_size=(11,), stride=(1,), padding=(25,), dilation=(5,))
+      )
+      (convs2): ModuleList(
+        (0-2): 3 x Conv1d(32, 32, kernel_size=(11,), stride=(1,), padding=(5,))
+      )
+    )
+  )
+  (conv_post): Conv1d(32, 1, kernel_size=(7,), stride=(1,), padding=(3,))
+)
+checkpoint directory :  /ZFS4T/tts/data/Hifi_GAN/checkpoint/
+Loading "/ZFS4T/tts/data/Hifi_GAN/checkpoint/g_00030000"
+Complete.
+Loading "/ZFS4T/tts/data/Hifi_GAN/checkpoint/do_00030000"
+Complete.
+Epoch : 49
+Steps : 30005, Gen Loss Total : 32.637, Mel-Spec. Error : 0.391, s/b : 1.173
+Steps : 30010, Gen Loss Total : 32.739, Mel-Spec. Error : 0.394, s/b : 1.172
+Steps : 30015, Gen Loss Total : 33.120, Mel-Spec. Error : 0.408, s/b : 1.121
+Steps : 30020, Gen Loss Total : 32.497, Mel-Spec. Error : 0.386, s/b : 1.272
+Steps : 30025, Gen Loss Total : 32.218, Mel-Spec. Error : 0.406, s/b : 1.167
+Steps : 30030, Gen Loss Total : 35.288, Mel-Spec. Error : 0.437, s/b : 1.230
+Steps : 30035, Gen Loss Total : 31.058, Mel-Spec. Error : 0.378, s/b : 1.167
+Steps : 30040, Gen Loss Total : 32.269, Mel-Spec. Error : 0.402, s/b : 1.202
+Steps : 30045, Gen Loss Total : 33.769, Mel-Spec. Error : 0.412, s/b : 1.191
+Steps : 30050, Gen Loss Total : 33.363, Mel-Spec. Error : 0.413, s/b : 1.204
+Steps : 30055, Gen Loss Total : 33.506, Mel-Spec. Error : 0.398, s/b : 1.191
+Steps : 30060, Gen Loss Total : 32.955, Mel-Spec. Error : 0.400, s/b : 1.241
+Steps : 30065, Gen Loss Total : 31.903, Mel-Spec. Error : 0.410, s/b : 1.184
+Steps : 30070, Gen Loss Total : 33.200, Mel-Spec. Error : 0.410, s/b : 1.163
+Steps : 30075, Gen Loss Total : 31.793, Mel-Spec. Error : 0.390, s/b : 1.228
+Steps : 30080, Gen Loss Total : 34.009, Mel-Spec. Error : 0.419, s/b : 1.228
+Steps : 30085, Gen Loss Total : 32.282, Mel-Spec. Error : 0.399, s/b : 1.246
+Steps : 30090, Gen Loss Total : 31.760, Mel-Spec. Error : 0.380, s/b : 1.141
+Steps : 30095, Gen Loss Total : 32.057, Mel-Spec. Error : 0.379, s/b : 1.185
+Steps : 30100, Gen Loss Total : 33.579, Mel-Spec. Error : 0.382, s/b : 1.214
+Steps : 30105, Gen Loss Total : 33.214, Mel-Spec. Error : 0.392, s/b : 1.211
+Steps : 30110, Gen Loss Total : 32.897, Mel-Spec. Error : 0.385, s/b : 1.177
+Steps : 30115, Gen Loss Total : 31.507, Mel-Spec. Error : 0.388, s/b : 1.128
+Steps : 30120, Gen Loss Total : 35.547, Mel-Spec. Error : 0.456, s/b : 1.150
+Steps : 30125, Gen Loss Total : 32.390, Mel-Spec. Error : 0.382, s/b : 1.156
+Steps : 30130, Gen Loss Total : 32.320, Mel-Spec. Error : 0.373, s/b : 1.184
+Steps : 30135, Gen Loss Total : 32.914, Mel-Spec. Error : 0.400, s/b : 1.215
+Steps : 30140, Gen Loss Total : 31.617, Mel-Spec. Error : 0.404, s/b : 1.163
+Steps : 30145, Gen Loss Total : 33.624, Mel-Spec. Error : 0.412, s/b : 1.198
+Steps : 30150, Gen Loss Total : 34.205, Mel-Spec. Error : 0.434, s/b : 1.128
+Steps : 30155, Gen Loss Total : 32.953, Mel-Spec. Error : 0.409, s/b : 1.223
+Steps : 30160, Gen Loss Total : 30.461, Mel-Spec. Error : 0.371, s/b : 1.173
+Steps : 30165, Gen Loss Total : 33.586, Mel-Spec. Error : 0.429, s/b : 1.202
+Steps : 30170, Gen Loss Total : 32.979, Mel-Spec. Error : 0.424, s/b : 1.208
+Steps : 30175, Gen Loss Total : 33.879, Mel-Spec. Error : 0.424, s/b : 1.204
+Steps : 30180, Gen Loss Total : 33.154, Mel-Spec. Error : 0.390, s/b : 1.240
+Steps : 30185, Gen Loss Total : 34.773, Mel-Spec. Error : 0.430, s/b : 1.153
+Steps : 30190, Gen Loss Total : 33.814, Mel-Spec. Error : 0.410, s/b : 1.185
+Steps : 30195, Gen Loss Total : 30.905, Mel-Spec. Error : 0.395, s/b : 1.165
+Steps : 30200, Gen Loss Total : 33.282, Mel-Spec. Error : 0.424, s/b : 1.150
+Steps : 30205, Gen Loss Total : 31.163, Mel-Spec. Error : 0.402, s/b : 1.192
+Steps : 30210, Gen Loss Total : 30.094, Mel-Spec. Error : 0.388, s/b : 1.216
+Steps : 30215, Gen Loss Total : 31.890, Mel-Spec. Error : 0.387, s/b : 1.131
+Steps : 30220, Gen Loss Total : 33.158, Mel-Spec. Error : 0.405, s/b : 1.162
+Steps : 30225, Gen Loss Total : 34.041, Mel-Spec. Error : 0.423, s/b : 1.188
+Steps : 30230, Gen Loss Total : 31.210, Mel-Spec. Error : 0.370, s/b : 1.182
+Steps : 30235, Gen Loss Total : 30.239, Mel-Spec. Error : 0.399, s/b : 1.130
+Steps : 30240, Gen Loss Total : 32.131, Mel-Spec. Error : 0.385, s/b : 1.183
+Steps : 30245, Gen Loss Total : 33.152, Mel-Spec. Error : 0.394, s/b : 1.190
+Steps : 30250, Gen Loss Total : 32.777, Mel-Spec. Error : 0.401, s/b : 1.162
+Steps : 30255, Gen Loss Total : 32.724, Mel-Spec. Error : 0.396, s/b : 1.206
+Steps : 30260, Gen Loss Total : 33.268, Mel-Spec. Error : 0.410, s/b : 1.147
+Steps : 30265, Gen Loss Total : 32.415, Mel-Spec. Error : 0.386, s/b : 1.131
+Steps : 30270, Gen Loss Total : 32.549, Mel-Spec. Error : 0.393, s/b : 1.112
+Steps : 30275, Gen Loss Total : 31.161, Mel-Spec. Error : 0.383, s/b : 1.250
+Steps : 30280, Gen Loss Total : 33.427, Mel-Spec. Error : 0.420, s/b : 1.149
+Steps : 30285, Gen Loss Total : 32.601, Mel-Spec. Error : 0.389, s/b : 1.231
+Steps : 30290, Gen Loss Total : 31.275, Mel-Spec. Error : 0.375, s/b : 1.138
+Steps : 30295, Gen Loss Total : 33.026, Mel-Spec. Error : 0.400, s/b : 1.174
+Steps : 30300, Gen Loss Total : 35.309, Mel-Spec. Error : 0.433, s/b : 1.163
+Steps : 30305, Gen Loss Total : 34.146, Mel-Spec. Error : 0.426, s/b : 1.183
+Steps : 30310, Gen Loss Total : 33.569, Mel-Spec. Error : 0.409, s/b : 1.216
+Steps : 30315, Gen Loss Total : 34.630, Mel-Spec. Error : 0.441, s/b : 1.203
+Steps : 30320, Gen Loss Total : 33.847, Mel-Spec. Error : 0.428, s/b : 1.159
+Steps : 30325, Gen Loss Total : 32.504, Mel-Spec. Error : 0.404, s/b : 1.131
+Steps : 30330, Gen Loss Total : 34.146, Mel-Spec. Error : 0.425, s/b : 1.152
+Steps : 30335, Gen Loss Total : 32.006, Mel-Spec. Error : 0.383, s/b : 1.146
+Steps : 30340, Gen Loss Total : 30.770, Mel-Spec. Error : 0.374, s/b : 1.190
+Steps : 30345, Gen Loss Total : 32.441, Mel-Spec. Error : 0.405, s/b : 1.133
+Steps : 30350, Gen Loss Total : 32.165, Mel-Spec. Error : 0.394, s/b : 1.145
+Steps : 30355, Gen Loss Total : 30.977, Mel-Spec. Error : 0.374, s/b : 1.147
+Steps : 30360, Gen Loss Total : 33.140, Mel-Spec. Error : 0.403, s/b : 1.163
+Steps : 30365, Gen Loss Total : 33.982, Mel-Spec. Error : 0.417, s/b : 1.189
+Steps : 30370, Gen Loss Total : 32.760, Mel-Spec. Error : 0.411, s/b : 1.180
+Steps : 30375, Gen Loss Total : 33.948, Mel-Spec. Error : 0.406, s/b : 1.135
+Steps : 30380, Gen Loss Total : 32.282, Mel-Spec. Error : 0.375, s/b : 1.147
+Steps : 30385, Gen Loss Total : 31.596, Mel-Spec. Error : 0.389, s/b : 1.127
+Steps : 30390, Gen Loss Total : 32.950, Mel-Spec. Error : 0.412, s/b : 1.146
+Steps : 30395, Gen Loss Total : 31.759, Mel-Spec. Error : 0.381, s/b : 1.122
+Steps : 30400, Gen Loss Total : 33.139, Mel-Spec. Error : 0.398, s/b : 1.152
+Steps : 30405, Gen Loss Total : 32.547, Mel-Spec. Error : 0.390, s/b : 1.134
+Steps : 30410, Gen Loss Total : 34.806, Mel-Spec. Error : 0.446, s/b : 1.161
+Steps : 30415, Gen Loss Total : 32.661, Mel-Spec. Error : 0.393, s/b : 1.163
+Steps : 30420, Gen Loss Total : 32.001, Mel-Spec. Error : 0.398, s/b : 1.177
+Steps : 30425, Gen Loss Total : 31.754, Mel-Spec. Error : 0.374, s/b : 1.245
+Steps : 30430, Gen Loss Total : 33.735, Mel-Spec. Error : 0.406, s/b : 1.119
+Steps : 30435, Gen Loss Total : 31.514, Mel-Spec. Error : 0.384, s/b : 1.147
+Steps : 30440, Gen Loss Total : 31.029, Mel-Spec. Error : 0.368, s/b : 1.142
+Steps : 30445, Gen Loss Total : 33.095, Mel-Spec. Error : 0.386, s/b : 1.224
+Steps : 30450, Gen Loss Total : 33.231, Mel-Spec. Error : 0.406, s/b : 1.156
+Steps : 30455, Gen Loss Total : 33.938, Mel-Spec. Error : 0.390, s/b : 1.195
+Steps : 30460, Gen Loss Total : 33.440, Mel-Spec. Error : 0.395, s/b : 1.123
+Steps : 30465, Gen Loss Total : 35.294, Mel-Spec. Error : 0.446, s/b : 1.162
+Steps : 30470, Gen Loss Total : 33.729, Mel-Spec. Error : 0.415, s/b : 1.219
+Steps : 30475, Gen Loss Total : 32.808, Mel-Spec. Error : 0.401, s/b : 1.135
+Steps : 30480, Gen Loss Total : 33.449, Mel-Spec. Error : 0.404, s/b : 1.149
+Steps : 30485, Gen Loss Total : 32.718, Mel-Spec. Error : 0.386, s/b : 1.143
+Steps : 30490, Gen Loss Total : 31.761, Mel-Spec. Error : 0.403, s/b : 1.186
+Steps : 30495, Gen Loss Total : 33.606, Mel-Spec. Error : 0.412, s/b : 1.202
+Steps : 30500, Gen Loss Total : 34.112, Mel-Spec. Error : 0.417, s/b : 1.210
+Steps : 30505, Gen Loss Total : 34.942, Mel-Spec. Error : 0.447, s/b : 1.154
+Steps : 30510, Gen Loss Total : 31.205, Mel-Spec. Error : 0.405, s/b : 1.113
+Steps : 30515, Gen Loss Total : 31.824, Mel-Spec. Error : 0.370, s/b : 1.140
+Steps : 30520, Gen Loss Total : 32.661, Mel-Spec. Error : 0.407, s/b : 1.190
+Steps : 30525, Gen Loss Total : 31.518, Mel-Spec. Error : 0.395, s/b : 1.131
+Steps : 30530, Gen Loss Total : 31.798, Mel-Spec. Error : 0.377, s/b : 1.178
+Steps : 30535, Gen Loss Total : 31.610, Mel-Spec. Error : 0.375, s/b : 1.190
+Steps : 30540, Gen Loss Total : 33.017, Mel-Spec. Error : 0.399, s/b : 1.196
+Steps : 30545, Gen Loss Total : 33.994, Mel-Spec. Error : 0.402, s/b : 1.224
+Steps : 30550, Gen Loss Total : 31.380, Mel-Spec. Error : 0.370, s/b : 1.198
+Steps : 30555, Gen Loss Total : 32.754, Mel-Spec. Error : 0.384, s/b : 1.181
+Steps : 30560, Gen Loss Total : 31.796, Mel-Spec. Error : 0.370, s/b : 1.242
+Steps : 30565, Gen Loss Total : 31.657, Mel-Spec. Error : 0.386, s/b : 1.173
+Steps : 30570, Gen Loss Total : 31.152, Mel-Spec. Error : 0.390, s/b : 1.223
+Steps : 30575, Gen Loss Total : 33.002, Mel-Spec. Error : 0.415, s/b : 1.225
+Steps : 30580, Gen Loss Total : 33.643, Mel-Spec. Error : 0.412, s/b : 1.125
+Steps : 30585, Gen Loss Total : 34.648, Mel-Spec. Error : 0.431, s/b : 1.136
+Steps : 30590, Gen Loss Total : 33.243, Mel-Spec. Error : 0.437, s/b : 1.131
+Steps : 30595, Gen Loss Total : 33.102, Mel-Spec. Error : 0.405, s/b : 1.152
+Steps : 30600, Gen Loss Total : 32.653, Mel-Spec. Error : 0.398, s/b : 1.156
+Steps : 30605, Gen Loss Total : 31.881, Mel-Spec. Error : 0.388, s/b : 1.240
+Steps : 30610, Gen Loss Total : 33.398, Mel-Spec. Error : 0.425, s/b : 1.146
+Steps : 30615, Gen Loss Total : 31.086, Mel-Spec. Error : 0.397, s/b : 1.196
+Steps : 30620, Gen Loss Total : 31.715, Mel-Spec. Error : 0.390, s/b : 1.131
+Steps : 30625, Gen Loss Total : 32.668, Mel-Spec. Error : 0.389, s/b : 1.146
+Steps : 30630, Gen Loss Total : 32.142, Mel-Spec. Error : 0.397, s/b : 1.126
+Steps : 30635, Gen Loss Total : 33.342, Mel-Spec. Error : 0.390, s/b : 1.147
+Steps : 30640, Gen Loss Total : 32.030, Mel-Spec. Error : 0.372, s/b : 1.130
+Steps : 30645, Gen Loss Total : 31.707, Mel-Spec. Error : 0.391, s/b : 1.178
+Steps : 30650, Gen Loss Total : 30.861, Mel-Spec. Error : 0.388, s/b : 1.175
+Steps : 30655, Gen Loss Total : 33.987, Mel-Spec. Error : 0.421, s/b : 1.141
+Steps : 30660, Gen Loss Total : 32.422, Mel-Spec. Error : 0.386, s/b : 1.235
+Steps : 30665, Gen Loss Total : 32.550, Mel-Spec. Error : 0.384, s/b : 1.146
+Steps : 30670, Gen Loss Total : 32.273, Mel-Spec. Error : 0.376, s/b : 1.148
+Steps : 30675, Gen Loss Total : 32.392, Mel-Spec. Error : 0.389, s/b : 1.109
+Steps : 30680, Gen Loss Total : 31.327, Mel-Spec. Error : 0.375, s/b : 1.170
+Steps : 30685, Gen Loss Total : 32.449, Mel-Spec. Error : 0.387, s/b : 1.227
+Steps : 30690, Gen Loss Total : 33.425, Mel-Spec. Error : 0.407, s/b : 1.177
+Steps : 30695, Gen Loss Total : 33.356, Mel-Spec. Error : 0.400, s/b : 1.171
+Steps : 30700, Gen Loss Total : 31.257, Mel-Spec. Error : 0.386, s/b : 1.155
+Steps : 30705, Gen Loss Total : 33.647, Mel-Spec. Error : 0.404, s/b : 1.218
+Steps : 30710, Gen Loss Total : 33.071, Mel-Spec. Error : 0.404, s/b : 1.206
+Steps : 30715, Gen Loss Total : 31.666, Mel-Spec. Error : 0.375, s/b : 1.161
+Steps : 30720, Gen Loss Total : 29.673, Mel-Spec. Error : 0.373, s/b : 1.216
+Steps : 30725, Gen Loss Total : 30.174, Mel-Spec. Error : 0.363, s/b : 1.185
+Steps : 30730, Gen Loss Total : 31.078, Mel-Spec. Error : 0.376, s/b : 1.127
+Steps : 30735, Gen Loss Total : 33.560, Mel-Spec. Error : 0.421, s/b : 1.148
+Steps : 30740, Gen Loss Total : 33.099, Mel-Spec. Error : 0.392, s/b : 1.108
+Steps : 30745, Gen Loss Total : 32.652, Mel-Spec. Error : 0.395, s/b : 1.212
+Steps : 30750, Gen Loss Total : 31.043, Mel-Spec. Error : 0.386, s/b : 1.171
+Steps : 30755, Gen Loss Total : 32.547, Mel-Spec. Error : 0.372, s/b : 1.116
+Steps : 30760, Gen Loss Total : 30.896, Mel-Spec. Error : 0.367, s/b : 1.140
+Steps : 30765, Gen Loss Total : 32.927, Mel-Spec. Error : 0.410, s/b : 1.181
+Steps : 30770, Gen Loss Total : 33.784, Mel-Spec. Error : 0.412, s/b : 1.194
+Steps : 30775, Gen Loss Total : 35.734, Mel-Spec. Error : 0.430, s/b : 1.210
+Steps : 30780, Gen Loss Total : 34.565, Mel-Spec. Error : 0.397, s/b : 1.168
+Steps : 30785, Gen Loss Total : 36.644, Mel-Spec. Error : 0.448, s/b : 1.126
+Steps : 30790, Gen Loss Total : 35.115, Mel-Spec. Error : 0.423, s/b : 1.140
+Steps : 30795, Gen Loss Total : 32.329, Mel-Spec. Error : 0.422, s/b : 1.192
+Steps : 30800, Gen Loss Total : 30.824, Mel-Spec. Error : 0.396, s/b : 1.187
+Steps : 30805, Gen Loss Total : 32.474, Mel-Spec. Error : 0.408, s/b : 1.184
+Steps : 30810, Gen Loss Total : 35.211, Mel-Spec. Error : 0.471, s/b : 1.172
+Steps : 30815, Gen Loss Total : 32.079, Mel-Spec. Error : 0.422, s/b : 1.156
+Steps : 30820, Gen Loss Total : 32.462, Mel-Spec. Error : 0.412, s/b : 1.114
+Steps : 30825, Gen Loss Total : 33.680, Mel-Spec. Error : 0.406, s/b : 1.104
+Time taken for epoch 49 is 968 sec
+
+Epoch : 50
+Steps : 30830, Gen Loss Total : 34.501, Mel-Spec. Error : 0.413, s/b : 1.179
+Steps : 30835, Gen Loss Total : 28.805, Mel-Spec. Error : 0.407, s/b : 1.136
+Steps : 30840, Gen Loss Total : 31.715, Mel-Spec. Error : 0.401, s/b : 1.206
+Steps : 30845, Gen Loss Total : 31.674, Mel-Spec. Error : 0.404, s/b : 1.180
+Steps : 30850, Gen Loss Total : 30.865, Mel-Spec. Error : 0.406, s/b : 1.153
+Steps : 30855, Gen Loss Total : 30.480, Mel-Spec. Error : 0.386, s/b : 1.172
+Steps : 30860, Gen Loss Total : 31.121, Mel-Spec. Error : 0.392, s/b : 1.209
+Steps : 30865, Gen Loss Total : 30.529, Mel-Spec. Error : 0.406, s/b : 1.156
+Steps : 30870, Gen Loss Total : 31.467, Mel-Spec. Error : 0.415, s/b : 1.150
+Steps : 30875, Gen Loss Total : 30.564, Mel-Spec. Error : 0.379, s/b : 1.182
+Steps : 30880, Gen Loss Total : 31.246, Mel-Spec. Error : 0.402, s/b : 1.237
+Steps : 30885, Gen Loss Total : 30.054, Mel-Spec. Error : 0.379, s/b : 1.234
+Steps : 30890, Gen Loss Total : 31.471, Mel-Spec. Error : 0.392, s/b : 1.184
+Steps : 30895, Gen Loss Total : 27.884, Mel-Spec. Error : 0.376, s/b : 1.202
+Steps : 30900, Gen Loss Total : 29.053, Mel-Spec. Error : 0.369, s/b : 1.242
+Steps : 30905, Gen Loss Total : 30.613, Mel-Spec. Error : 0.388, s/b : 1.219
+Steps : 30910, Gen Loss Total : 29.869, Mel-Spec. Error : 0.377, s/b : 1.259
+Steps : 30915, Gen Loss Total : 29.554, Mel-Spec. Error : 0.374, s/b : 1.228
+Steps : 30920, Gen Loss Total : 30.709, Mel-Spec. Error : 0.404, s/b : 1.234
+Steps : 30925, Gen Loss Total : 32.429, Mel-Spec. Error : 0.401, s/b : 1.179
+Steps : 30930, Gen Loss Total : 30.926, Mel-Spec. Error : 0.389, s/b : 1.136
+Steps : 30935, Gen Loss Total : 31.055, Mel-Spec. Error : 0.388, s/b : 1.178
+Steps : 30940, Gen Loss Total : 31.177, Mel-Spec. Error : 0.418, s/b : 1.170
+Steps : 30945, Gen Loss Total : 29.767, Mel-Spec. Error : 0.370, s/b : 1.158
+Steps : 30950, Gen Loss Total : 30.970, Mel-Spec. Error : 0.394, s/b : 1.187
+Steps : 30955, Gen Loss Total : 31.700, Mel-Spec. Error : 0.405, s/b : 1.190
+Steps : 30960, Gen Loss Total : 31.843, Mel-Spec. Error : 0.420, s/b : 1.187
+Steps : 30965, Gen Loss Total : 32.923, Mel-Spec. Error : 0.446, s/b : 1.160
+Steps : 30970, Gen Loss Total : 30.824, Mel-Spec. Error : 0.383, s/b : 1.175
+Steps : 30975, Gen Loss Total : 30.182, Mel-Spec. Error : 0.382, s/b : 1.188
+Steps : 30980, Gen Loss Total : 31.724, Mel-Spec. Error : 0.414, s/b : 1.216
+Steps : 30985, Gen Loss Total : 30.280, Mel-Spec. Error : 0.382, s/b : 1.260
+Steps : 30990, Gen Loss Total : 30.247, Mel-Spec. Error : 0.375, s/b : 1.189
+Steps : 30995, Gen Loss Total : 31.761, Mel-Spec. Error : 0.416, s/b : 1.182
+Steps : 31000, Gen Loss Total : 30.116, Mel-Spec. Error : 0.372, s/b : 1.176
